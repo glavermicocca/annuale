@@ -1,0 +1,20 @@
+{
+    "env": {
+        "node": true,
+        "es6": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:promise/recommended"
+    ],
+    "plugins": [
+        "standard",
+        "promise"
+    ],
+    "parserOptions": {
+        "sourceType": "module"
+    },
+    "rules":{
+        "quotes": ["error", "single"]
+    }
+}

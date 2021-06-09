@@ -1,0 +1,40 @@
+{
+    "name": "Mov Multiplo Sposto",
+    "recipe": "chrome-pdf",
+    "shortid": "bcn62Yttw-",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1621631845826
+    },
+    "modificationDate": {
+        "$$date": 1622799260105
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "data": {
+        "shortid": "r7nShgAIRo"
+    },
+    "resources": {
+        "items": [
+            {
+                "shortid": "r7nShgAIRo",
+                "entitySet": "data"
+            }
+        ],
+        "defaultLanguage": "andrea.delpup"
+    },
+    "pdfPassword": null,
+    "_id": "uENRd4VBSYjikWy7",
+    "$entitySet": "templates",
+    "pdfOperations": [
+        {
+            "type": "merge",
+            "templateShortid": "b675kS0AEf",
+            "mergeWholeDocument": true,
+            "renderForEveryPage": false
+        }
+    ]
+}

@@ -1,0 +1,27 @@
+{
+    "name": "Movimenti di Carico",
+    "recipe": "chrome-pdf",
+    "shortid": "3tpbGuBHuD",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1621095307627
+    },
+    "modificationDate": {
+        "$$date": 1622537596404
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "data": {
+        "shortid": "Pp_wIjWzb7"
+    },
+    "resources": {
+        "defaultLanguage": "andrea.delpup",
+        "items": []
+    },
+    "pdfPassword": null,
+    "_id": "Aa9uzUlmMcxVVp8Z",
+    "$entitySet": "templates"
+}

@@ -1,0 +1,31 @@
+name: Node CI
+
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+   
+    steps:
+    - name: Checkout project
+      uses: actions/checkout@v1
+    - uses: actions/cache@v1
+      with:
+        path: ~/.npm
+        key: node-${{ hashFiles('**/package-lock.json') }}
+        restore-keys: |
+          node-
+    - name: Setup MySQL
+      run: |
+        curl -L -O http://downloads.mysql.com/docs/sakila-db.tar.gz && tar -xzf sakila-db.tar.gz
+        sed -i 's/ENGINE=InnoDB/ENGINE=MyISAM/g' sakila-db/sakila-schema.sql
+        mysql -u root --password="root" < sakila-db/sakila-schema.sql
+        mysql -u root --password="root" < sakila-db/sakila-data.sql
+    - name: npm install, test, and coverage
+      run: |
+        npm ci
+        npm run lint
+        npm run cest
+    - uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}

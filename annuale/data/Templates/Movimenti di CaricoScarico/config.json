@@ -1,0 +1,27 @@
+{
+    "shortid": "E7AOzzU6aN",
+    "name": "Movimenti di CaricoScarico",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "creationDate": {
+        "$$date": 1620811931433
+    },
+    "modificationDate": {
+        "$$date": 1622537085881
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "T2Ztayzwc1uZY9hu",
+    "$entitySet": "templates",
+    "data": {
+        "shortid": "Pp_wIjWzb7"
+    },
+    "resources": {
+        "defaultLanguage": "andrea.delpup",
+        "items": []
+    },
+    "pdfPassword": null
+}

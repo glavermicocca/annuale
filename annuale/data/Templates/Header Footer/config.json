@@ -1,0 +1,26 @@
+{
+    "shortid": "b675kS0AEf",
+    "name": "Header Footer",
+    "recipe": "chrome-pdf",
+    "engine": "handlebars",
+    "chrome": {
+        "printBackground": true
+    },
+    "resources": {
+        "defaultLanguage": "andrea.delpup",
+        "items": []
+    },
+    "creationDate": {
+        "$$date": 1621869682213
+    },
+    "modificationDate": {
+        "$$date": 1621884791054
+    },
+    "inheritedReadPermissions": [],
+    "inheritedEditPermissions": [],
+    "_id": "RSqmCfJ8rSf21hwS",
+    "$entitySet": "templates",
+    "data": {
+        "shortid": "r7nShgAIRo"
+    }
+}

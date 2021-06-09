@@ -1,0 +1,54 @@
+{
+  "name": "tubular-nodejs",
+  "version": "1.0.18",
+  "description": "Tubular Node.js Backend",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint src/**/*.js --quiet --fix",
+    "test": "jest --detectOpenHandles",
+    "cest": "jest --detectOpenHandles --collect-coverage"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unosquare/tubular-nodejs.git"
+  },
+  "keywords": [
+    "grid",
+    "tubular"
+  ],
+  "author": "Unosquare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unosquare/tubular-nodejs/issues"
+  },
+  "homepage": "https://github.com/unosquare/tubular-nodejs#readme",
+  "dependencies": {
+    "express-fileupload": "^1.2.1",
+    "file-type": "^16.3.0",
+    "knex": "^0.21.5",
+    "knex-migrate": "^1.7.4",
+    "knex-migrator": "^4.0.3",
+    "lodash": "^4.17.20",
+    "tubular-common": "^4.0.18"
+  },
+  "devDependencies": {
+    "eslint": "^7.7.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-config-standard": "^14.1.1",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-promise": "^4.2.1",
+    "eslint-plugin-standard": "^4.0.1",
+    "jest": "^26.4.2",
+    "mysql": "^2.18.1",
+    "prettier": "^2.1.0"
+  },
+  "nyc": {
+    "exclude": [
+      "**/*.spec.js",
+      "build"
+    ]
+  },
+  "eslintIgnore": [
+    "*.spec.js"
+  ]
+}

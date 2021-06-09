@@ -1,0 +1,105 @@
+{
+  "name": "tubular-react",
+  "version": "4.2.13",
+  "description": "Unosquare Tubular React",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "parcel ./sample/app/index.html --open --port 9000",
+    "build": "tsc",
+    "check": "npm run lint && npm test",
+    "lint": "tsc --noEmit && eslint ./src/**/*.{ts,tsx} --quiet",
+    "lint:fix": "eslint ./src/**/*.{ts,tsx} --quiet --fix",
+    "test": "jest",
+    "cest": "jest --collect-coverage",
+    "preparepackage": "npm run build && npm run copypackage && cd dist && npm pack",
+    "copypackage": "npx shx cp package.json dist",
+    "prettier": "prettier --check src/**/*.ts*",
+    "prettier:fix": "prettier --write src/**/*.ts*",
+    "codestyle:fix": "npm run lint:fix && npm run prettier:fix"
+  },
+  "prettier": {
+    "endOfLine": "auto",
+    "semi": true,
+    "trailingComma": "all",
+    "singleQuote": true,
+    "printWidth": 120,
+    "tabWidth": 4
+  },
+  "jest": {
+    "automock": false,
+    "collectCoverageFrom": [
+      "./src/**/*.{ts,tsx}",
+      "!**/node_modules/**",
+      "!./test/**"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "ts-jest"
+    },
+    "testMatch": [
+      "<rootDir>/test/**/*.spec.(ts|tsx)"
+    ],
+    "globals": {
+      "ts-jest": {
+        "diagnostics": false,
+        "tsConfig": "tsconfig.json"
+      }
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/unosquare/tubular-react.git"
+  },
+  "author": "Unosquare",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/unosquare/tubular-react/issues"
+  },
+  "homepage": "https://github.com/unosquare/tubular-react#readme",
+  "peerDependencies": {
+    "@material-ui/core": "^4.11.3",
+    "@material-ui/icons": "^4.11.2"
+  },
+  "dependencies": {
+    "@date-io/date-fns": "^2.10.8",
+    "@material-ui/pickers": "^4.0.0-alpha.8",
+    "@svgr/parcel-plugin-svgr": "^5.5.0",
+    "clsx": "^1.1.1",
+    "date-fns": "^2.17.0",
+    "react-virtualized": "^9.22.2",
+    "tubular-common": "^5.0.11",
+    "tubular-react-common": "3.0.9",
+    "uno-material-ui": "^2.0.10",
+    "uno-react": "1.0.12"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^11.2.5",
+    "@testing-library/react-hooks": "^5.0.3",
+    "@types/jest": "^26.0.20",
+    "@types/react": "^17.0.1",
+    "@types/react-dom": "^17.0.0",
+    "@types/react-virtualized": "^9.21.11",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "eslint": "^7.19.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-prettier": "^3.3.1",
+    "eslint-plugin-react": "^7.22.0",
+    "jest": "^26.6.3",
+    "jest-fetch-mock": "^3.0.3",
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-clean-easy": "^1.0.2",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "17.0.1",
+    "ts-jest": "^26.5.1",
+    "typescript": "^4.1.5"
+  },
+  "parcelCleanPaths": [
+    "dist/*.*"
+  ]
+}

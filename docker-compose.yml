@@ -1,0 +1,31 @@
+version: '3.8'
+services:
+  web_server_app:
+    environment:
+      - NODE_ENV=production
+      - IMPIANTO=ANNUALE
+    restart: unless-stopped
+    depends_on:
+      - db
+    build:
+      context: ./
+      dockerfile: Dockerfile
+      args:
+        buildno: 1
+    ports:
+      - 4021:3000
+    networks:
+      - internal-network
+  db:
+    image: postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_PASSWORD: example
+      POSTGRES_DB: annuale
+    networks:
+      - internal-network
+    ports:
+      - 5434:5432
+
+networks:
+  internal-network:
