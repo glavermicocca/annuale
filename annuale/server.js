@@ -168,9 +168,6 @@ require('./routes/IMAGES')(app, checkToken, db, tbNodeMethod)
 require('./routes/IMAGES_VALORE')(app, checkToken, db)
 require('./routes/VALORE')(app, checkToken, db, tbNodeMethod)
 
-const reportingApp = express()
-app.use('/reporting', reportingApp)
-
 // ---------------- SOCKET.iO ---------------------
 
 app.get('/welcome', (req, res) => {
@@ -207,37 +204,3 @@ if (process.env.NODE_ENV === 'production') {
 }
 
 // ---------------- Init Reporting ---------------------
-
-const jsreport = require('jsreport')({
-  store: { provider: 'fs' },
-  appPath: '/reporting',
-  chrome: {
-    launchOptions: {
-      args: ['--no-sandbox']
-    }
-  },
-  extensions: {
-    express: { app: reportingApp, server: server },
-    'fs-store': {
-      dataDirectory: 'data'
-    },
-    authentication: {
-      cookieSession: {
-        secret: 'dasd321as56d1sd5s61vdv32'
-      },
-      admin: {
-        username: process.env.JSREPORT_USER,
-        password: process.env.JSREPORT_PASSWORD
-      }
-    }
-  }
-})
-
-jsreport
-  .init()
-  .then(() => {
-    console.log('jsreport server started')
-  })
-  .catch(e => {
-    console.error(e)
-  })
